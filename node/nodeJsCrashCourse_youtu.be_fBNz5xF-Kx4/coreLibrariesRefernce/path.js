@@ -22,3 +22,6 @@ console.log(path.parse(__filename));
 
 // concat
 console.log(path.join(path.parse(__filename).dir, "sjk","index.js"));
+
+// path format
+console.log(path.format(__filename));
