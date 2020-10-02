@@ -2,10 +2,10 @@
   "name": "learningmern",
   "version": "1.0.0",
   "description": "Getting started with MERN",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "dev" : "node server.js"
+    "start": "node server",
+    "dev" : "nodemon server"
   },
   "repository": {
     "type": "git",
