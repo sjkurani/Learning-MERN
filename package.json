@@ -1,26 +1,20 @@
 {
-  "name": "learningmern",
+  "name": "LearningMERN",
   "version": "1.0.0",
-  "description": "Getting started with MERN",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
-    "dev" : "nodemon server"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sjkurani/Learning-MERN.git"
   },
-  "keywords": [
-    "Learning",
-    "mern",
-    "gettting",
-    "started",
-    "with",
-    "MERN"
-  ],
-  "author": "shridhar kurani",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/sjkurani/Learning-MERN/issues"
   },
