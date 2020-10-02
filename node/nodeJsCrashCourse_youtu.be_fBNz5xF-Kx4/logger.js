@@ -39,7 +39,9 @@ class Logger extends EventsEmitter{
     * @desc get filePath,lineNumber,message from data array and add timestamp, id and then write everything to file.
     * */
     log(msg, type) {
-        this.on('message', data => console.log("Log added to file."));
+        this.on('message', data => {
+            // console.log("Log added to file.")
+        });
         var timeStamp = new Date();
         var callerFileName = process.mainModule.filename;
         var data = {id: uuid.v4(), msg: msg, timeStamp: timeStamp, filename : callerFileName, type : type};

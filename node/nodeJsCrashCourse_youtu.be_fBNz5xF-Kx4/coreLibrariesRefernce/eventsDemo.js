@@ -9,11 +9,10 @@ class MyEmitter extends EventEmitter{
 
 //Init object
 const myEmitter = new MyEmitter();
-
 //Event Listner
 myEmitter.on('event', (data) => {
     console.log(data);
 })
 
-myEmitter.log("HIIHI")
+myEmitter.log("Log function called on event emitter...");
 
