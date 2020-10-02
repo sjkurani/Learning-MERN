@@ -2,6 +2,7 @@ const EventsEmitter = require('events');
 const uuid = require('uuid');
 const fs = require('fs');
 const path = require('path');
+
 const config = require('./config');
 var appBaseUri = config.appBaseUri;
 var logDirName = path.join(appBaseUri, config.logDirName);
@@ -38,12 +39,27 @@ class Logger extends EventsEmitter{
     * @desc get filePath,lineNumber,message from data array and add timestamp, id and then write everything to file.
     * */
     log(msg, type) {
-        this.on('message', data => console.log(data));
-        // Call Event.
+        this.on('message', data => console.log("Log added to file."));
         var timeStamp = new Date();
         var callerFileName = process.mainModule.filename;
-        this.emit('message', {
-            id: uuid.v4(), msg, timeStamp, callerFileName, type
+        var data = {id: uuid.v4(), msg: msg, timeStamp: timeStamp, filename : callerFileName, type : type};
+        this.emit('message', {data});
+
+        // Append to the log file.
+        fs.open(logFileName, 'a', (err, fd) => {
+            if (err) {
+                if (err.code === 'ENOENT') {
+                    console.error(`Log File ${logFileName} is not present.`);
+                    return;
+                }
+                throw err;
+            }
+            fs.appendFile(fd, "\n" + JSON.stringify(data), 'utf8', (err) => {
+                fs.close(fd, (err) => {
+                    if (err) throw err;
+                });
+                if (err) throw err;
+            });
         });
 
     }

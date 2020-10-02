@@ -1,23 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-class FileSystem extends fs {
-    constructor() {
-        super();
-    }
-
-    createDirectory(dirName = '') {
-        if(dirName) {
-
-        }
-        else {
-
-        }
-    },
-
-}
-
-module.exports = FileSystem;
 //create directory
 var dirName = path.join(path.dirname(__filename),'test1');
 var myFileName = path.join(dirName,'testFile.txt');
