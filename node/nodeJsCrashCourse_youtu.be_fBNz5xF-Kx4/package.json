@@ -1,0 +1,30 @@
+{
+  "name": "learningmern",
+  "version": "1.0.0",
+  "description": "Getting started with MERN",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjkurani/Learning-MERN.git"
+  },
+  "keywords": [
+    "Learning",
+    "mern",
+    "gettting",
+    "started",
+    "with",
+    "MERN"
+  ],
+  "author": "shridhar kurani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sjkurani/Learning-MERN/issues"
+  },
+  "homepage": "https://github.com/sjkurani/Learning-MERN#readme",
+  "dependencies": {
+    "uuid": "^8.3.0"
+  }
+}
